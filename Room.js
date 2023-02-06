@@ -126,6 +126,7 @@ Data = [ {
 Room.post("/Room/Create", function (req, res) {
     req.body.id = Data.length + 1;
     Data.push(req.body);
+   
 
     //POST Message
     res.json({ Message: "Room created Done Boss" });
@@ -164,7 +165,7 @@ Room.get("/Rooms/All",function(req,res){
 
 
 //Booking Room Customer (POST METHOD)
-Room.post("/Rooms/Customers",function(req,res){
+Room.post("/Room/Customer",function(req,res){
     //Booking
     const All = req.body
 
